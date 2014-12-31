@@ -1,50 +1,53 @@
+a.- przypadek testowy
+b.- wynik testu
+
 ID: SCN001
-a. dodanie jednej kwoty przychodu
-b. aplikacja poprawnie zapisuje wprowadzon¹ wartoœæ, dodaj¹c j¹ do bilansu
+a. dodanie wartoœci przychodu do kategorii "Salary"
+b. aplikacja poprawnie zapisuje wprowadzon¹ wartoœæ "100", dodaj¹c j¹ do "Balance" i do kategorii "Salary" 
 
 ID: SCN002
-a. zmiana zapisanej kwoty przychodu
-b. aplikacja poprawnie zmienia wczeœniej utworzon¹ wartoœæ przychodu
+a. zmiana kwoty przychodu kategorii "Salary"
+b. aplikacja poprawnie zmienia wczeœniej utworzon¹ wartoœæ przychodu kategorii "Salary" z 100 na 1001. "Balance" roœnie o 901.
 
 ID: SCN003
-a. dodanie kwoty wydatku
-b. aplikacja poprawnie zapisuje dodany wydatek i odejmuje jego wartoœæ od bilansu
+a. utworzenie wydatku i przypisanie go do kategorii "Food"
+b. aplikacja poprawnie zapisuje dodan¹ wartoœæ do kategorii "Food" i odejmuje jej wartoœæ od "Balance"
 
 ID:SCN004
-a. dodanie wydatku w kategorii "food"
-b. aplikacja poprawnie dodaje wybrany wydatek, zapisuj¹c jego wartoœæ i odejmuj¹c j¹ od bilansu
+a. dodanie wydatku w kategorii "Food"
+b. aplikacja poprawnie zapisuje wybrany wydatek, zapisuj¹c jego wartoœæ do kategorii "Food" i odejmuj¹c j¹ od "Balance"
 
 ID: SCN005
-a. dodanie notatki dla nowej kwoty przychodu
-b.wprowadzona wartoœæ zapisuje siê z dodan¹ notatk¹
+a. dodanie notatki dla wartosci "1001" w kategorii "Salary"
+b. Kwota "1001" zapisuje siê z notak¹ "good money", co widoczne jest po wejœciu w "Balance" i klikniêciu na "Salary"
 
 ID: SCN006
-a. usuniêciu jednej z dodanych kwot
-b. zapsana kwota kasuje siê i jest odejmowana z bilansu
+a. usuniêcie wartoœci "12" z kategorii "Food"
+b. "Balance" zwiêksza siê o usuniet¹ wartoœæ a kategoria "Food" jest usuwana 
 
 ID: SCN007
 a. dodanie przychodu o wartoœci =0
 b. aplikacja nie zapisuje wartoœci =0. Wpisywana wartoœæ musi byæ >0
 
 ID: SCN008
-a. wprowadzanie maksymalnej wartoœci
-b. aplikacja zapusuje poprawnie maksymaln¹ wartoœæ 999999999.99
+a. sprawdzenie czy po wprowadzeniu maksymalnej wartoœci bêdzie  mo¿na j¹ dodaæ do dodatniego "Balance"
+b. aplikacja zapusuje poprawnie maksymaln¹ wartoœæ "999999999.99", a "Balance" zwiêksza siê o tê wartoœæ 
 
 ID: SCN009
-a. zmiana kategorii dla zapisanej kwoty przychodu
-b. kategoria wybranego przychodu zmienia siê
-
-ID: SCN010
 a. dodanie nowej kategorii
 b. przy próbie dodania w³asnej kategorii pojawia siê komunikat, ¿e opcja dostêpna jest w wersji p³atnej programu. Jest to w³aœciwe dla testowanej wersji aplikacji
 
+ID: SCN010
+a. zmiana kategorii dla utworzonej wartoœci przychodu
+b. wartoœæ 1001 zmienia kategoriê z "Salary" na "Deposits" 
+
 ID:SCN011
-a. ustawienie trybu bud¿etu
-b. opcja bud¿etu ustawiana jest z wprowadzon¹ wartoœci¹
+a. w³¹czanie "Budget mode"
+b. opcja bud¿etu w³¹czana jest z wprowadzon¹ wartoœci¹ 1000 
 
 ID: SCN012
-a. zmiana ustawionej waluty
-b. wybrana waluta ustawia siê w aplikacji, pokazuje siê przy wszystkich wczeœniej dodanych jak i nowych kwotach
+a. ustawienie waluty "Poland Zloty"
+b. wybrana waluta Poland Zloty(PLN) ustawia siê w aplikacji i pokazuje siê przy wszystkich wczeœniej dodanych jak i nowych wartoœciach
 
 ID: SCN013
 a. wyeksportowanie danych do pliku
