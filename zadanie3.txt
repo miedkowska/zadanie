@@ -1,0 +1,21 @@
+1. Wykonane zosta³y testy metod¹ czarnoskrzynkow¹, z wykorzystaniem
+przypadków u¿ycia i przejœæ pomiêdzy stanami
+
+2. Raport powinien zawieraæ dodatkowo oczekiwane wyniki, oraz czas 
+trwania wykonywanych testów. Mo¿e zawieraæ informacje na temat testów, 
+które trzeba powtórzyæ, jak i testów, które nie bêd¹ ju¿ stosowane
+
+3. Jeœli program dzia³a niezgodnie z za³o¿eniami, okreœlonymi w dokumentacji.
+
+4.  Dla tego typu aplikacji powinny byæ wykonane testy przejœæ miêdzy stanami,  
+testy w oparciu o przypadki u¿ycia.  Mo¿na wykonaæ analizê wartoœci brzegowych. 
+Jeœli bêd¹ poprawiane jakieœ usterki to nale¿y wykonaæ testy potwierdzaj¹ce.  
+Mo¿na wykonaæ równie¿ testy niefunkcjonalne, na przyk³ad testy przeci¹¿aj¹ce.  
+Aplikacja mo¿e równie¿ zostaæ przetestowana przez potencjalnych u¿ytkowników (testy beta) 
+
+5. Nie mo¿na w 100% przetestowaæ aplikacji. Jest zbyt wiele kombinacji i danych wejœciowych.  
+
+6. Testowanie mo¿na zakoñczyæ, kiedy wykonane testy osi¹gnê³y zamierzony cel. 
+Jeœli zaprojektowane testy zosta³y wykonane i da³y pozytywne wyniki. 
+Zawsze pozostaj¹ jednak np. testy pielêgnacyjne, które wykonywane s¹, np. gdy zostan¹ 
+wprowadzone zmiany w œrodowisku, w którym aplikacja dzia³a.
