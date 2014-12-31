@@ -1,0 +1,224 @@
+Feature: Managing finances
+
+ !Author: Joanna Miedkowska
+
+ !Overview: Adding, removing and changing value
+
+ !Preconditions: application running in emulator
+
+
+  Scenario: Add incomes
+
+   !ID: SCN001
+
+   !Preconditions: "Balance" has value "0". Category "Salary" has value "0"
+
+   !Overview: Add incomes in category "Salary" with value "100"
+
+	Given click on "plus" button
+	When enter a value "100"
+	And click "choose category"
+	And click on "Salary"
+	Then "Balance" has value "100"
+	And category "Salary" has value "100"
+
+  Scenario: Change incomes
+
+   !ID: SCN002
+
+   !Preconditions: Category "Salary" has value "100"
+
+   !Overview: Change "Salary" from "100" to "1001"             
+
+	Given click on "Balance" button
+	And click on "Salary"
+	And click on value "100" with green dot
+	When enter "1"
+	And click "Save" button
+	Then "Salary" is changed from "100" to "1001"
+	And value "901" is added to "Balance"
+
+  Scenario: Add expenses
+
+   !ID: SCN003
+   
+   !Preconditions: Category "Food" has value "0". "Balance" has value "100"
+
+   !Overview: Add expenses with value "15" and assign to "Food"              category 
+
+	Given click on "minus" button
+	When enter a value "15"
+	And click on "choose category"
+	And click on "Food" icon
+	Then "Balance" has value "85"
+	And category "Food" has value "15"
+
+  Scenario: Add expenses on food
+
+   !ID: SCN004
+
+   !Preconditions: Category "Food" has value "0". "Balance" has value "100"
+
+   !Overview: Add expenses in "Food" category by choosing category              from main screen
+
+	Given click on "Food" icon
+	When enter a value "15"
+	And click "Add Food" button
+	Then "Balance" has value "85"
+	And category "Food" has value "15"
+
+  Scenario: Add note to single value
+
+   !ID: SCN005
+
+   !Preconditions: Category "Salary" has value "1001"
+
+   !Overview: Add note to value "1001" in category "Salary"
+
+	Given click on "Balance"
+	And click on "Salary"
+	And click on value "1001" with green dot
+	And click on "Add note"
+	When enter the note "good money"
+	And click "OK"
+	And click "Save"
+	Then note "good money" is added to value "1001" in category "Salary"
+
+  Scenario: Delete one value
+
+   !ID: SCN006
+
+   !Preconditions: Category "Food" has value "12". "Balance" has value "100"
+
+   !Overview: Delete value "12" from "Food" category
+
+	Given click on Balance
+	And click on "Food" category
+	And click on value "12" with red dot
+	When click on "Delete" button
+	Then category "Food" is deleted from "Balance"
+	And "Balance has value "112" 
+
+  Scenario: Add incomes with "0" value
+
+   !ID: SCN007
+
+   !Overview: Try to add incomes with "0" value
+
+	Given click on "plus" button
+	When enter nothing
+	And click on "Choose category"
+	Then the value will not be saved
+	And the box with value "0" flash in red
+
+  Scenario: check if maximum value can be added to positive "Balance"
+
+   !ID: SCN008
+
+   !Preconditions: "Balance" has value "1"
+
+   !Overview: Add max possible value "999999999.99" to positive "Balance" to check if "Balance" can be higher than "999999999.99"
+
+	Given click on "plus" button
+	When type "999999999.99"
+	And click "Choose category"
+	And click on "Salary"
+	Then the value of "Balance is "1000000000.99"
+
+	 
+Feature: Managing categories
+
+ !Author: Joanna Miedkowska
+
+ !Overview: changing and adding category
+
+ !Preconditions: application in emulator
+
+
+  Scenario: Add new category
+
+   !ID: SCN009
+
+   !Overview: Add new category to application
+
+	Given click on right menu icon
+	And click on "Manage categories"
+	When click on "plus" sign
+	Then information about blockade appears
+
+  Scenario: Change category of incomes
+
+   !ID: SCN010
+
+   !Preconditions: Category "Salary" has value "1001". Category "Deposits" has value "1"
+
+   !Overview: Change value "1001" category from "Salary" to              "Deposits"
+
+	Given click on "Balance"
+	And click on "Salary"
+	And click on value "1001" with green dot
+	When click on "Change category"
+	And click on "Deposits"
+	Then category "Salary" is deleted
+	And category "Deposits" has value "1002"
+	
+
+
+Feature: Managing settings
+
+ !Author: Joanna Miedkowska
+
+ !Overview: Change and use settings
+
+ !Preconditions: application in emulator
+
+
+  Scenario: Set "Budget mode"
+
+   !ID: SCN011
+
+   !Overview: Set Budget mode with value "1000"
+
+	Given click on right menu icon
+	And click on "Settings"
+	When click on "Budget mode"
+	And enter value "1000"
+	And click "Ok"
+	Then the "Budget mode" is set with value "1000"
+	
+  Scenario: Set currency
+
+   !ID: SCN012
+
+   !Preconditions: Currency is "US Dollar(USD)"
+
+   !Overview: Set currency "Poland Zloty"
+
+	Given click on right menu icon
+	And click on "Settings"
+	And click on "Currency"
+	When select "Poland Zloty(PLN)"
+	And click "ok"
+	Then currency "Poland Zloty" is set
+
+  Scenario: Export to file
+
+   !ID: SCN013
+ 
+   !Overview: Export data from aplication to file
+
+	Given click on right menu icon
+	When click on "Export to file"
+	Then box with download options is shown 
+
+  Scenario: Review the application in Google Play
+
+   !ID: SCN014
+
+   !Overview: Review the application by option in menu
+
+	Given click on right menu icon
+	And click "Settings"
+	When click on "Rewiev the application"
+	Then Google Play is opened on Monefy site
+	 
