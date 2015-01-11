@@ -1,0 +1,44 @@
+1.W którym przypadku ³atwiej wprowadziæ zmiany w
+
+scenariuszach, np. zmieniæ dane do logowania?
+
+Zmiany ³atwiej wprowadzaæ w scenariuszach przy testach automatycznych. Zmienia siê wtedy jedn¹ wartoœæ, a pozosta³e wykonuj¹ siê w ten sam sposób automatycznie
+
+2. Jaki rodzaj testów wykonuje siê za pomoc¹ testów 
+
+automatycznych?
+
+testy czarnoskrzynkowe: funkcjonalne oraz niefunkcjonalne (np. wydajnoœciowe, obci¹¿eniowe, przeci¹¿eniowe)
+
+3. Jakich rodzajów testów nie wykona siê za pomoc¹ 
+
+testów automatycznych, lub bêd¹ one zbyt 
+
+czasoch³onne i ma³o efektywne, ¿eby je 
+
+wykonywaæ?
+
+Nie warto wykonywaæ automatyzacji dla testów, które wykonuje siê rzadko. Testy wymagaj¹ce fizycznej interakcji przez u¿ytkownika nie mog¹ zostaæ zautomatyzowane. Równie¿ automatyzacji nie bêdzie mo¿na przeprowadziæ na akcjach wykonywanych przez aplikacjê, które s¹ ³atwe do sprawdzenia przez cz³owieka, np dŸwiêk
+
+
+4. Jakie plusy i minusy automatyzacji dostrzegacie po 
+
+wykonaniu laboratoriów, wymieñcie po 3 
+
+najwa¿niejsze?
+
+plusy: 
+s¹ powtarzalne, wykonywane w takim samym czasie i mo¿na dok³adnie przeanalizowaæ wynik testu
+
+minusy:
+czas pisania testów i konfiguracji œrodowiska, nie wszystkie testy mog¹ zostaæ zautomatyzowane
+
+5. Jaka jest ró¿nica pomiêdzy testami 
+
+wydajnoœciowymi a obci¹¿eniowymi?
+
+Testy wydajnoœciowe sprawdzaj¹, czy akcje danej aplikacji wykonuj¹ siê w akceptowalnym czasie
+Testy obci¹¿eniowe sprawdzaj¹ obci¹¿enie systemu podczas zwiêkszania np liczy u¿ytkowników czy iloœci zapytañ
+
+6. Jakie s¹ g³ówne cechy automatyzacji testów?
+Automatyzacja pozwala na wykonywanie takich samych testów, niezale¿nie od dnia i godziny. Testy automatyczne zwracaj¹ szczegó³owe raporty, na podstawie których mo¿emy ³atwo utworzyæ sprawozdanie. Dziêki automatyzacji mo¿emy szybko zweryfikowaæ, czy zosta³y poprawione b³êdy w oprogramowaniu.
