@@ -1,0 +1,187 @@
+Feature: Managing finances
+  
+  !Author: Joanna Miedkowska
+  
+  !Overview: Adding, removing and changing value
+  
+  !Preconditions: application running in emulator
+
+  Scenario: Add incomes                                                        # features\1.feature:10
+    
+    !ID: SCN001
+    
+    !Preconditions: "Balance" has value "0". Category "Deposits" has value "0"
+    
+    !Overview: Add incomes in category "Deposits" with value "100"
+    Given I touch the "ok" text                                                # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Given I touch the "ok" text                                                # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Given I press view with id "income_button"                                 # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:13
+    When I press view with id "buttonKeyboard1"                                # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:13
+    When I press view with id "buttonKeyboard0"                                # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:13
+    When I press view with id "buttonKeyboard0"                                # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:13
+    When I touch the "Choose category" text                                    # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    When I touch the "ok" text                                                 # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    When I touch the "Deposits" text                                           # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Then I wait for the view with id "piegraph" to appear                      # calabash-android-0.5.5/lib/calabash-android/steps/progress_steps.rb:42
+
+1 scenario (1 passed)
+10 steps (10 passed)
+4m20.633s
+
+Feature: Managing settings
+  
+  !Author: Joanna Miedkowska
+  
+  !Overview: Change category icon
+  
+  !Preconditions: application in emulator
+
+  Scenario: Set currency                           # features\12.feature:9
+    
+    !ID: SCN012
+    
+    !Preconditions: Currency is "US Dollar(USD)"
+    
+    !Overview: Set currency "Uzbekistan Sum (UZS)"
+    Given I touch the "ok" text                    # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Given I touch the "ok" text                    # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Given I press view with id "overflow"          # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:13
+    Given I touch the "Settings" text              # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    When I touch the "Currency" text               # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Then I touch the "Uzbekistan Sum (UZS)" text   # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Then I touch the "OK" text                     # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+
+1 scenario (1 passed)
+7 steps (7 passed)
+3m48.650s
+
+
+Feature: Managing finances
+  
+  !Author: Joanna Miedkowska
+  
+  !Overview: Adding, removing and changing value
+  
+  !Preconditions: application running in emulator
+
+  Scenario: Change incomes                                 # features\2.feature:9
+    
+     !ID: SCN002
+    
+     !Preconditions: Category "Deposits" has value "100"
+    
+     !Overview: Change "Salary" from "100" to "1001"
+    Given I touch the "ok" text                            # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Given I touch the "ok" text                            # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Given I press view with id "income_button"             # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:13
+    Given I press view with id "buttonKeyboard1"           # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:13
+    Given I press view with id "buttonKeyboard0"           # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:13
+    Given I press view with id "buttonKeyboard0"           # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:13
+    Given I touch the "Choose category" text               # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Given I touch the "ok" text                            # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Given I touch the "Deposits" text                      # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Given I press view with id "SliderDragView"            # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:13
+    Given I touch the "$100.00" text                       # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Given I press view with id "textViewTransactionAmount" # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:13
+    When I press view with id "buttonKeyboard1"            # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:13
+    Then I touch the "Save" text                           # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+
+1 scenario (1 passed)
+14 steps (14 passed)
+4m55.357s
+
+Feature: Managing settings
+  
+  !Author: Joanna Miedkowska
+  
+  !Overview: Change and use settings
+  
+  !Preconditions: application in emulator
+
+  Scenario: Set "Year"                # features\14.feature:10
+    Given I touch the "ok" text       # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Given I touch the "ok" text       # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Given I press view with id "home" # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:13
+    When I touch the "Year" text      # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Then I see the text "2015"        # calabash-android-0.5.5/lib/calabash-android/steps/assert_steps.rb:1
+
+1 scenario (1 passed)
+5 steps (5 passed)
+3m35.040s
+
+
+Feature: Managing finances
+  
+  !Author: Joanna Miedkowska
+  
+  !Overview: Adding, removing and changing value
+  
+  !Preconditions: application running in emulator
+
+  Scenario: Add expenses                                                   # features\3.feature:9
+    
+     !ID: SCN003
+     
+     !Preconditions: Category "Food" has value "0". 
+     !Overview: Add expenses with value "15" and assign to "Food" category
+    Given I press view with id "expense_button"                            # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:13
+    When I press view with id "buttonKeyboard1"                            # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:13
+    When I press view with id "buttonKeyboard5"                            # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:13
+    When I touch the "Choose category" text                                # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Then I touch the "ok" text                                             # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    When I touch the "Food" text                                           # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+
+1 scenario (1 passed)
+6 steps (6 passed)
+4m1.156s
+
+Feature: Managing settings
+  
+  !Author: Joanna Miedkowska
+  
+  !Overview: Change and use settings
+  
+  !Preconditions: application in emulator
+
+  Scenario: Set passcode protection                   # features\12.feature:9
+    
+    !ID: SCN012
+    !Overview: Set passcode protection
+    Given I touch the "ok" text                       # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Given I touch the "ok" text                       # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Given I press view with id "overflow"             # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:13
+    Given I touch the "Settings" text                 # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    When I touch the "Passcode protection" text       # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Then I should see "Passcode protection is locked" # calabash-android-0.5.5/lib/calabash-android/steps/assert_steps.rb:9
+
+1 scenario (1 passed)
+6 steps (6 passed)
+3m44.313s
+
+Feature: Managing settings
+  
+  !Author: Joanna Miedkowska
+  
+  !Overview: Change and use settings
+  
+  !Preconditions: application in emulator
+
+  Scenario: Change language               # features\17.feature:9
+    
+    !ID: SCN017
+    
+    !Preconditions: Language is English
+    
+    !Overview: Change language to Deutsch
+    Given I touch the "ok" text           # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Given I touch the "ok" text           # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Given I press view with id "overflow" # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:13
+    Given I touch the "Settings" text     # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    When I touch the "Language" text      # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Then I touch the "Deutsch" text       # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+    Then I touch the "OK" text            # calabash-android-0.5.5/lib/calabash-android/steps/press_button_steps.rb:25
+
+1 scenario (1 passed)
+7 steps (7 passed)
+3m52.852s
+
